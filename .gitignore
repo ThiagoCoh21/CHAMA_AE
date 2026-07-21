@@ -1,0 +1,51 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+
+# Build output
+dist/
+build/
+*.tsbuildinfo
+
+# Expo / Metro
+.expo/
+.expo-shared/
+apps/mobile/.expo/
+web-build/
+.metro-health-check*
+
+# Builds nativos (gerados por `expo prebuild`)
+apps/mobile/android/
+apps/mobile/ios/
+
+# Artefatos de assinatura / segredos nativos
+*.jks
+*.keystore
+*.p8
+*.p12
+*.mobileprovision
+
+# Prisma
+apps/api/prisma/*.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Coverage
+coverage/

@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: chama_ae_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: chama
+      POSTGRES_PASSWORD: chama
+      POSTGRES_DB: chama_ae
+    ports:
+      - "5432:5432"
+    volumes:
+      - chama_ae_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U chama -d chama_ae"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  chama_ae_pgdata:

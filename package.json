@@ -1,0 +1,26 @@
+{
+  "name": "chama-ae",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Chama.AE - plataforma para organizar peladas: monorepo com app mobile (Expo) e API (Express + Prisma).",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "api": "npm --workspace @chama-ae/api run dev",
+    "mobile": "npm --workspace @chama-ae/mobile run start",
+    "build:shared": "npm --workspace @chama-ae/shared run build",
+    "lint": "npm --workspace @chama-ae/api run lint && npm --workspace @chama-ae/mobile run lint",
+    "test": "npm --workspace @chama-ae/api run test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "overrides": {
+    "react-native-css-interop": {
+      "react-native": "0.74.5",
+      "react-native-reanimated": "~3.10.1"
+    }
+  }
+}

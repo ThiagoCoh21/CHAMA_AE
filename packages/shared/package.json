@@ -1,0 +1,19 @@
+{
+  "name": "@chama-ae/shared",
+  "version": "1.0.0",
+  "description": "Tipos e contratos compartilhados entre a API e o app mobile do Chama.AE.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsc -p tsconfig.json --watch",
+    "clean": "rimraf dist"
+  },
+  "devDependencies": {
+    "rimraf": "^5.0.5",
+    "typescript": "^5.4.5"
+  }
+}
