@@ -16,5 +16,11 @@
   },
   "engines": {
     "node": ">=20"
+  },
+  "overrides": {
+    "react-native-css-interop": {
+      "react-native": "0.74.5",
+      "react-native-reanimated": "~3.10.1"
+    }
   }
 }
